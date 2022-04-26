@@ -8,5 +8,12 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-    padding: 5px;
+    padding: 10px;
+    border-radius: 10px;
+`;
+
+export const DivButton = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 `;

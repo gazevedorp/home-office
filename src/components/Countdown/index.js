@@ -6,7 +6,8 @@ import {
 
 import {
     Container,
-    Button
+    Button,
+    DivButton
 } from './styles'
 
 const Countdown = () => {
@@ -38,6 +39,7 @@ const Countdown = () => {
                 :
                 {String(seconds).padStart(2, '0').split('')}
             </h1>
+            <DivButton>
             <Button
                 disabled={isActive}
                 type='button'
@@ -58,6 +60,7 @@ const Countdown = () => {
             >
                 Descanso
             </Button>
+            </DivButton>
         </Container>
     );
 }

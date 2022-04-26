@@ -8,7 +8,8 @@ import {
     Container,
     Input,
     Button,
-    TodoItem
+    TodoItem,
+    DivInput
 } from './styles'
 
 const TodoList = () => {
@@ -19,20 +20,22 @@ const TodoList = () => {
     return (
         <Container>
             <h3>TAREFAS</h3>
-            <Input
-                type="text"
-                placeholder='Nova tarefa'
-                value={newTask}
-                onChange={e => setNewTask(e.target.value)}
-            />
-            <Button
-                type='button'
-                onClick={() => {
-                    list.push(newTask)
-                    setNewTask('')
-                }}>
-                Adicionar
-            </Button>
+            <DivInput>
+                <Input
+                    type="text"
+                    placeholder='Nova tarefa'
+                    value={newTask}
+                    onChange={e => setNewTask(e.target.value)}
+                />
+                <Button
+                    type='button'
+                    onClick={() => {
+                        list.push(newTask)
+                        setNewTask('')
+                    }}>
+                    Adicionar
+                </Button>
+            </DivInput>
             <div>
                 {list.map(item =>
                     <TodoItem
