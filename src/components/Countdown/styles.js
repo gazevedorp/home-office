@@ -2,11 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    p, h1, h3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p, h1, h2{
         color: #ffffff;
     }
     h1{
         text-align: center;
+    }
+    h2{
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 0px;
     }
 `;
 
@@ -22,6 +30,10 @@ export const Button = styled.button`
 
 export const DivButton = styled.div`
     display: flex;
+    width: 75%;
     flex-direction: row;
     justify-content: space-between;
+    @media(max-width: 450px){
+        width: 100%;
+    }
 `;

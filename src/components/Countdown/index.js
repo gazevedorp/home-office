@@ -33,7 +33,7 @@ const Countdown = () => {
 
     return (
         <Container>
-            <h3>CONTROLE DE TEMPO</h3>
+            <h2>CONTROLE DE TEMPO</h2>
             <h1>
                 {String(minutes).padStart(2, '0').split('')}
                 :

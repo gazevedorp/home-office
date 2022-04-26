@@ -2,35 +2,42 @@ import React from 'react';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    h3{
+    h2{
         color: #ffffff;
+        text-align: center;
+        margin-top: 0px;
+        padding-top: 0px;
     }
 `;
 
 
 export const Input = styled.input`
     padding: 10px;
-    width: 225px;
+    width: 60%;
     border-radius: 10px;
     outline: none;
     border: none;
-    @media(max-width: 600px){
-        width: 140px;
+    @media(min-width: 950px){
+        width: 70%;
+    }
+    @media(min-width: 1400px){
+        width: 80%;
+    }
+    @media(max-width: 450px){
+        width: 45%;
     }
 `;
 
 export const DivInput = styled.div`
-    width: 350px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;   
-     @media(max-width: 600px){
-        width: 250px;
-    }
 `;
 
 export const Button = styled.button`
     padding: 10px;
+    width: 85px;
     border-radius: 10px;
     cursor: pointer;
     border: none;

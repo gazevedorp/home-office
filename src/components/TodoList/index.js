@@ -37,7 +37,7 @@ const TodoList = () => {
 
     return (
         <Container>
-            <h3>TAREFAS</h3>
+            <h2>TAREFAS</h2>
             <DivInput>
                 <Input
                     type="text"
