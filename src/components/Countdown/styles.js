@@ -10,6 +10,8 @@ export const Container = styled.div`
 export const Button = styled.button`
     padding: 10px;
     border-radius: 10px;
+    width: 85px;
+    cursor: pointer;
 `;
 
 export const DivButton = styled.div`

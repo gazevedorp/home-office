@@ -10,20 +10,27 @@ export const Container = styled.div`
 
 export const Input = styled.input`
     padding: 10px;
-    width: 200px;
+    width: 225px;
     border-radius: 10px;
+    @media(max-width: 600px){
+        width: 140px;
+    }
 `;
 
 export const DivInput = styled.div`
     width: 350px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between;   
+     @media(max-width: 600px){
+        width: 250px;
+    }
 `;
 
 export const Button = styled.button`
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
 `;
 
 export const TodoItem = styled.div`
