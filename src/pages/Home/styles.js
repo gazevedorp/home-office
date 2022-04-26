@@ -8,6 +8,7 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-around;
     background-color: #421a41;
+    padding-top: 75px;
 `;
 
 export const ContainerCounter = styled.div`

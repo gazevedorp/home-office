@@ -14,11 +14,7 @@ import {
 const TodoList = () => {
 
     const [newTask, setNewTask] = useState()
-    const [list, setList] = useState([
-        "Arrumar quarto",
-        "Lavar louça",
-        "Molhar as plantas"
-    ])
+    const [list, setList] = useState([])
 
     return (
         <Container>
