@@ -5,7 +5,7 @@ import {
 } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addTodo } from '../../store/actions/todoActions';
+import { addTodo, removeTodo } from '../../store/actions/todoActions';
 
 import {
     Container,
@@ -26,9 +26,13 @@ const TodoList = () => {
         if (value !== "") {
             dispatch(addTodo(value))
         }
-        else{
+        else {
             alert("Digite o nome da tarefa!")
         }
+    }
+
+    const removeListRedux = (value) => {
+        dispatch(removeTodo(value))
     }
 
     return (
@@ -51,14 +55,13 @@ const TodoList = () => {
                 </Button>
             </DivInput>
             <div>
-                {listRedux.map(item =>
+                {listRedux.map((item, index) =>
                     <TodoItem
                         onClick={() => {
-                            const temp = list.filter(listItem => listItem !== item)
-                            setList(temp)
+                            removeListRedux(item)
                         }}
                     >
-                        <p key={item}>{item}</p>
+                        <p key={item}>{index + 1}. {item}</p>
                     </TodoItem>
                 )}
             </div>

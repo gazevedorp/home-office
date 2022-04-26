@@ -43,10 +43,12 @@ export const TodoItem = styled.div`
     margin-top: 10px;
     border: 1px solid black;
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #0e0036;
+    color: #ffffff;
     border-radius: 10px;
     p{
         margin: 0px;
         font-size: 14px;
+        font-weight: bold;
     }
 `;
