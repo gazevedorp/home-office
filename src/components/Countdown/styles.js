@@ -12,6 +12,9 @@ export const Button = styled.button`
     border-radius: 10px;
     width: 85px;
     cursor: pointer;
+    border: none;
+    background-color: #0e0036;
+    color: #ffffff;
 `;
 
 export const DivButton = styled.div`

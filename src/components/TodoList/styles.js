@@ -31,6 +31,9 @@ export const Button = styled.button`
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    border: none;
+    background-color: #0e0036;
+    color: #ffffff;
 `;
 
 export const TodoItem = styled.div`
