@@ -4,6 +4,9 @@ import {
     useState
 } from 'react';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { addTodo } from '../../store/actions/todoActions';
+
 import {
     Container,
     Input,
@@ -16,6 +19,17 @@ const TodoList = () => {
 
     const [newTask, setNewTask] = useState()
     const [list, setList] = useState([])
+    const listRedux = useSelector(state => state.todos)
+    const dispatch = useDispatch();
+
+    const setListRedux = (value) => {
+        if (value !== "") {
+            dispatch(addTodo(value))
+        }
+        else{
+            alert("Digite o nome da tarefa!")
+        }
+    }
 
     return (
         <Container>
@@ -30,14 +44,14 @@ const TodoList = () => {
                 <Button
                     type='button'
                     onClick={() => {
-                        list.push(newTask)
+                        setListRedux(newTask)
                         setNewTask('')
                     }}>
                     Adicionar
                 </Button>
             </DivInput>
             <div>
-                {list.map(item =>
+                {listRedux.map(item =>
                     <TodoItem
                         onClick={() => {
                             const temp = list.filter(listItem => listItem !== item)
