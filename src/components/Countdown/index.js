@@ -52,7 +52,7 @@ const Countdown = () => {
                 disabled={isActive}
                 type='button'
                 onClick={() => {
-                    setTime(0.2 * 60)
+                    setTime(10 * 60)
                     setIsActive(true)
                 }}
             >
