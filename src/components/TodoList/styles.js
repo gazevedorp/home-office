@@ -34,6 +34,7 @@ export const DivInput = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;   
+    margin-bottom: 15px;
 `;
 
 export const Button = styled.button`
