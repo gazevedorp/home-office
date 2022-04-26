@@ -17,6 +17,7 @@ export const Input = styled.input`
     border-radius: 10px;
     outline: none;
     border: none;
+    background-color: #ffffff;
     @media(min-width: 950px){
         width: 70%;
     }
