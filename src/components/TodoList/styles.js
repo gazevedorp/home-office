@@ -16,7 +16,7 @@ export const Input = styled.input`
     width: 60%;
     border-radius: 10px;
     outline: none;
-    border: none;
+    border: 1px solid #000000;
     background-color: #ffffff;
     @media(min-width: 950px){
         width: 70%;
@@ -42,8 +42,8 @@ export const Button = styled.button`
     width: 85px;
     border-radius: 10px;
     cursor: pointer;
-    border: none;
-    background-color: #0e0036;
+    box-shadow: 1px 1px 1px black;
+    background-color: #4f2d4b;
     color: #ffffff;
 `;
 
@@ -52,12 +52,12 @@ export const TodoItem = styled.div`
     margin-top: 10px;
     border: 1px solid black;
     cursor: pointer;
+    border: 1px solid black;
     background-color: #0e0036;
     color: #ffffff;
     border-radius: 10px;
     p{
         margin: 0px;
         font-size: 14px;
-        font-weight: bold;
     }
 `;

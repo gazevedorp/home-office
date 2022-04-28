@@ -23,8 +23,8 @@ export const Button = styled.button`
     border-radius: 10px;
     width: 85px;
     cursor: pointer;
-    border: none;
-    background-color: #0e0036;
+    box-shadow: 1px 1px 1px black;
+    background-color: #4f2d4b;
     color: #ffffff;
 `;
 
