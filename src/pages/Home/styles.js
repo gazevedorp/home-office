@@ -27,7 +27,7 @@ export const ContainerCounter = styled.div`
     padding: 50px;
     border-radius: 10px;
     height: 180px;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     @media(max-width: 800px){
         width: 60%;
     }
@@ -40,7 +40,7 @@ export const ContainerTodo = styled.div`
     padding: 50px;
     border-radius: 10px;
     min-height: 180px;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     @media(max-width: 800px){
         width: 60%;
     }
