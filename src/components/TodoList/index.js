@@ -12,19 +12,20 @@ import {
     Input,
     Button,
     TodoItem,
-    DivInput
+    DivInput,
+    ButtonColor
 } from './styles'
 
 const TodoList = () => {
 
     const [newTask, setNewTask] = useState()
-    const [list, setList] = useState([])
+    const [priority, setPriority] = useState(1)
     const listRedux = useSelector(state => state.todos)
     const dispatch = useDispatch();
 
     const setListRedux = (value) => {
         if (value !== "") {
-            dispatch(addTodo(value))
+            dispatch(addTodo({ name: value, priority: priority }))
         }
         else {
             alert("Digite o nome da tarefa!")
@@ -45,23 +46,42 @@ const TodoList = () => {
                     value={newTask}
                     onChange={e => setNewTask(e.target.value)}
                 />
+                <ButtonColor
+                    type='button'
+                    color="white"
+                    selected={priority === 1}
+                    onClick={() => setPriority(1)}
+                />
+                <ButtonColor
+                    type='button'
+                    color="darkorange"
+                    selected={priority === 2}
+                    onClick={() => setPriority(2)}
+                />
+                <ButtonColor
+                    type='button'
+                    color="darkred"
+                    selected={priority === 3}
+                    onClick={() => setPriority(3)}
+                />
                 <Button
                     type='button'
                     onClick={() => {
                         setListRedux(newTask)
                         setNewTask('')
                     }}>
-                    Adicionar
+                    +
                 </Button>
             </DivInput>
             <div>
-                {listRedux.map((item, index) =>
+                {listRedux.sort((a, b) => b.priority - a.priority).map((item, index) =>
                     <TodoItem
+                        priority={item.priority}
                         onClick={() => {
                             removeListRedux(item)
                         }}
                     >
-                        <p key={item}>{index + 1}. {item}</p>
+                        <p key={item.name}>{item.name}</p>
                     </TodoItem>
                 )}
             </div>

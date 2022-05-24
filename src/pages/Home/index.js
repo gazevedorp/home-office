@@ -6,7 +6,7 @@ import TodoList from '../../components/TodoList';
 import {
     Container,
     ContainerCounter,
-    ContainerTodo
+    ContainerTodo,
 } from './styles'
 
 const Home = () => {

@@ -7,7 +7,7 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
-    background-color: #0e0036;
+    background-color: #1C1C1C;
     height: 100vh;
     padding-bottom: 50px;
     @media(max-width: 800px){
@@ -22,7 +22,7 @@ export const ContainerCounter = styled.div`
     flex-direction: column;
     justify-content: center;
     width: 30%;
-    background-color: #4c264b;
+    background-color: #273746;
     margin-top: 50px;
     padding: 50px;
     border-radius: 10px;
@@ -35,7 +35,7 @@ export const ContainerCounter = styled.div`
 
 export const ContainerTodo = styled.div`
     width: 40%;
-    background-color: #4c264b;
+    background-color: #273746;
     margin-top: 50px;
     padding: 50px;
     border-radius: 10px;

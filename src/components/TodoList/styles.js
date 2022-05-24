@@ -16,6 +16,7 @@ export const Input = styled.input`
     width: 60%;
     border-radius: 10px;
     outline: none;
+    margin-right: 2px;
     border: 1px solid #000000;
     background-color: #ffffff;
     @media(min-width: 950px){
@@ -37,13 +38,21 @@ export const DivInput = styled.div`
     margin-bottom: 15px;
 `;
 
+export const ButtonColor = styled.button`
+    width: 10px;
+    margin-right: 2px;
+    border-radius: 30px;
+    border: 1px solid ${props => props.selected ? props.color : "black"}; 
+    cursor: pointer;
+    background-color: ${props => props.color};
+`;
+
 export const Button = styled.button`
     padding: 10px;
-    width: 85px;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 1px 1px 1px black;
-    background-color: #4f2d4b;
+    background-color: #1C1C1C;
     color: #ffffff;
 `;
 
@@ -53,9 +62,12 @@ export const TodoItem = styled.div`
     border: 1px solid black;
     cursor: pointer;
     border: 1px solid black;
-    background-color: #0e0036;
+    background-color: #1C1C1C;
     color: #ffffff;
     border-radius: 10px;
+    border-right: 10px solid ${props =>
+        props.priority === 1 ? "white" :
+            props.priority === 2 ? "darkorange" : "darkred"};
     p{
         margin: 0px;
         font-size: 14px;

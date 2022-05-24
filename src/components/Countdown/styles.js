@@ -10,6 +10,8 @@ export const Container = styled.div`
     }
     h1{
         text-align: center;
+        margin-top: 0px;
+        font-size: 46px;
     }
     h2{
         text-align: center;
@@ -24,7 +26,7 @@ export const Button = styled.button`
     width: 85px;
     cursor: pointer;
     box-shadow: 1px 1px 1px black;
-    background-color: #4f2d4b;
+    background-color: #1C1C1C;
     color: #ffffff;
 `;
 
