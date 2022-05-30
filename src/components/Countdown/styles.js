@@ -23,10 +23,10 @@ export const Container = styled.div`
 export const Button = styled.button`
     padding: 10px;
     border-radius: 10px;
-    width: 85px;
+    width: 100px;
     cursor: pointer;
     box-shadow: 1px 1px 1px black;
-    background-color: #1C1C1C;
+    background-color: ${props => props.showColor ? "darkred" : "#1C1C1C"};
     color: #ffffff;
 `;
 
