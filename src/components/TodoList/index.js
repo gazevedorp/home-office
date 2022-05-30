@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-    useEffect,
+    //useEffect,
     useState
 } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addTodo, removeTodo } from '../../store/actions/todoActions';
+import { addTodo, alterTodo, removeTodo } from '../../store/actions/todoActions';
 
 import {
     Container,
@@ -32,8 +32,14 @@ const TodoList = () => {
         }
     }
 
+    const alterListRedux = (value) => {
+        dispatch(alterTodo(value.name))
+    }
+
     const removeListRedux = (value) => {
-        dispatch(removeTodo(value))
+        if (window.confirm("Deseja realmente excluir esta tarefa?")) {
+            dispatch(removeTodo(value))
+        }
     }
 
     return (
@@ -78,6 +84,9 @@ const TodoList = () => {
                     <TodoItem
                         priority={item.priority}
                         onClick={() => {
+                            alterListRedux(item)
+                        }}
+                        onDoubleClick={() => {
                             removeListRedux(item)
                         }}
                     >

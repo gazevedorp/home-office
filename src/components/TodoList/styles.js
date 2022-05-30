@@ -67,9 +67,16 @@ export const TodoItem = styled.div`
     border-radius: 10px;
     border-right: 10px solid ${props =>
         props.priority === 1 ? "white" :
-            props.priority === 2 ? "darkorange" : "darkred"};
+            props.priority === 2 ? "darkorange" :
+                props.priority === 3 ? "darkred" : "darkgreen"};
     p{
         margin: 0px;
         font-size: 14px;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
     }
 `;
