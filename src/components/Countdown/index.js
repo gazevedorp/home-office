@@ -30,7 +30,7 @@ const Countdown = () => {
         }
         else {
             if (audioOn) {
-                new Audio('./notification3.wav').play();
+                //new Audio('./notification3.wav').play();
             }
             setIsActive(false);
             setTime(0 * 60);
@@ -91,7 +91,7 @@ const Countdown = () => {
                         }
                     }}
                 >
-                    {!countdownOn && type === "work" ? "Pausar" : "Trabalho"}
+                    {!countdownOn && type === "work" ? "Resetar" : "Trabalho"}
                 </Button>
                 <Button
                     showColor={!countdownOn && type === "rest"}
@@ -107,7 +107,7 @@ const Countdown = () => {
                         }
                     }}
                 >
-                    {!countdownOn && type === "rest" ? "Pausar" : "Descanso"}
+                    {!countdownOn && type === "rest" ? "Resetar" : "Descanso"}
                 </Button>
                 <Button
                     showColor={countdownOn}
@@ -124,7 +124,7 @@ const Countdown = () => {
                         }
                     }}
                 >
-                    {countdownOn ? "Pausar Ciclo" : "Iniciar Ciclo"}
+                    {countdownOn ? "Resetar Ciclo" : "Iniciar Ciclo"}
                 </Button>
             </DivButton>
         </Container >

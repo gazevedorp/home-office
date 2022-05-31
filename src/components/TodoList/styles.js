@@ -13,20 +13,20 @@ export const Container = styled.div`
 
 export const Input = styled.input`
     padding: 10px;
-    width: 60%;
+    width: 75%;
     border-radius: 10px;
     outline: none;
     margin-right: 2px;
     border: 1px solid #000000;
     background-color: #ffffff;
     @media(min-width: 950px){
-        width: 70%;
-    }
-    @media(min-width: 1400px){
         width: 80%;
     }
+    @media(min-width: 1400px){
+        width: 85%;
+    }
     @media(max-width: 450px){
-        width: 45%;
+        width: 50%;
     }
 `;
 

@@ -21,18 +21,22 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-    padding: 10px;
+    padding: 20px 10px 20px 10px;
+    margin: 5px;
     border-radius: 10px;
-    width: 100px;
+    width: 30%;
     cursor: pointer;
     box-shadow: 1px 1px 1px black;
     background-color: ${props => props.showColor ? "darkred" : "#1C1C1C"};
     color: #ffffff;
+    @media(max-width: 1000px){
+    padding: 10px 0px 10px 0px;
+    }
 `;
 
 export const DivButton = styled.div`
     display: flex;
-    width: 75%;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     @media(max-width: 450px){
