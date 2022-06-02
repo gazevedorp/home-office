@@ -57,7 +57,7 @@ const Countdown = () => {
         if (!countdownOn) {
             setType("work")
         }
-        setTime(0.3 * 60)
+        setTime(40 * 60)
         setIsActive(true)
     }
 
@@ -65,7 +65,7 @@ const Countdown = () => {
         if (!countdownOn) {
             setType("rest")
         }
-        setTime(0.2 * 60)
+        setTime(10 * 60)
         setIsActive(true)
     }
 
