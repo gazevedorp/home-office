@@ -30,7 +30,7 @@ const Countdown = () => {
         }
         else {
             if (audioOn) {
-                //new Audio('./notification3.wav').play();
+                new Audio('./notification3.wav').play();
             }
             setIsActive(false);
             setTime(0 * 60);
@@ -40,13 +40,14 @@ const Countdown = () => {
     useEffect(() => {
         if (countdownOn) {
             if (!isActive) {
+                console.log(type)
                 if (type === "work") {
-                    WorkCounter()
                     setType("rest")
+                    WorkCounter()
                 }
                 else {
-                    RestCounter()
                     setType("work")
+                    RestCounter()
                 }
             }
         }
@@ -56,7 +57,7 @@ const Countdown = () => {
         if (!countdownOn) {
             setType("work")
         }
-        setTime(40 * 60)
+        setTime(0.3 * 60)
         setIsActive(true)
     }
 
@@ -64,13 +65,13 @@ const Countdown = () => {
         if (!countdownOn) {
             setType("rest")
         }
-        setTime(10 * 60)
+        setTime(0.2 * 60)
         setIsActive(true)
     }
 
     return (
         <Container>
-            <h2>{countdownOn ? (type === "work" ? "DESCANSO" : "TRABALHO") : type !== "" ? (type === "work" ? "TRABALHO" : "DESCANSO") : "CONTADOR"}</h2>
+            <h2>{countdownOn ? (type === "work" ? "DESCANSO" : "TRABALHO") : type !== "" && isActive ? (type === "work" ? "TRABALHO" : "DESCANSO") : "CONTADOR"}</h2>
             <h1>
                 {String(minutes).padStart(2, '0').split('')}
                 :
@@ -78,7 +79,7 @@ const Countdown = () => {
             </h1>
             <DivButton>
                 <Button
-                    showColor={!countdownOn && type === "work"}
+                    showColor={!countdownOn && isActive && type === "work"}
                     disabled={countdownOn}
                     onClick={() => {
                         if (isActive) {
@@ -91,10 +92,10 @@ const Countdown = () => {
                         }
                     }}
                 >
-                    {!countdownOn && type === "work" ? "Resetar" : "Trabalho"}
+                    {!countdownOn && isActive && type === "work" ? "Finalizar" : "Trabalho"}
                 </Button>
                 <Button
-                    showColor={!countdownOn && type === "rest"}
+                    showColor={!countdownOn && isActive && type === "rest"}
                     disabled={countdownOn}
                     onClick={() => {
                         if (isActive) {
@@ -107,7 +108,7 @@ const Countdown = () => {
                         }
                     }}
                 >
-                    {!countdownOn && type === "rest" ? "Resetar" : "Descanso"}
+                    {!countdownOn && isActive && type === "rest" ? "Finalizar" : "Descanso"}
                 </Button>
                 <Button
                     showColor={countdownOn}
@@ -124,7 +125,7 @@ const Countdown = () => {
                         }
                     }}
                 >
-                    {countdownOn ? "Resetar Ciclo" : "Iniciar Ciclo"}
+                    {countdownOn && isActive ? "Finalizar Ciclo" : "Iniciar Ciclo"}
                 </Button>
             </DivButton>
         </Container >
