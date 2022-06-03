@@ -71,7 +71,7 @@ const Countdown = () => {
 
     return (
         <Container>
-            <h2>{countdownOn ? (type === "work" ? "DESCANSO" : "TRABALHO") : type !== "" && isActive ? (type === "work" ? "TRABALHO" : "DESCANSO") : "CONTADOR"}</h2>
+            <h2>{countdownOn ? (type === "work" ? "DESCANSO" : "TRABALHO") : type !== "" && isActive ? (type === "work" ? "TRABALHO" : "DESCANSO") : "TEMPORIZADOR"}</h2>
             <h1>
                 {String(minutes).padStart(2, '0').split('')}
                 :
