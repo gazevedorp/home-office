@@ -38,6 +38,8 @@ export const ContainerTodo = styled.div`
     background-color: #273746;
     margin-top: 50px;
     padding: 50px;
+    padding-top: 35px;
+    padding-bottom: 65px;
     border-radius: 10px;
     min-height: 180px;
     border: 1px solid #000000;
