@@ -85,6 +85,15 @@ const TodoList = () => {
     const removeListRedux = (id) => {
         if (window.confirm("Deseja realmente excluir esta tarefa?")) {
             dispatch(removeTodo(id))
+            setTaskName("")
+            setTaskId("")
+            setTaskCompany("")
+            setTaskDate("")
+            setTaskDescription("")
+            setPriority(1)
+            setTaskClosed()
+            setIsOpen(false)
+            setTaskEstimatedTime("")
         }
     }
 
