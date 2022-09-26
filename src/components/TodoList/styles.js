@@ -84,8 +84,8 @@ export const TodoItem = styled.div`
     border: 1px solid black;
     cursor: pointer;
     border: 1px solid black;
-    background-color: ${props => props.closed ? "gray" : "#1C1C1C"};
-    color: #ffffff;
+    background-color: #1C1C1C;
+    color: ${props => props.closed ? "gray" : "#ffffff"};
     border-radius: 10px;
     border-right: 10px solid ${props =>
         props.closed ? "#1C1C1C" :
