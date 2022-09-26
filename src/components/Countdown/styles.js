@@ -76,7 +76,7 @@ export const Input = styled.input`
     margin-bottom: 10px;
 `;
 
-export const InputTitle = styled.h3`
+export const InputTitle = styled.h4`
     color: #ffffff;
     margin-bottom: 5px;
     font-weight: normal;
