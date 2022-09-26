@@ -146,7 +146,17 @@ const TodoList = () => {
             </Container>
             <Modal
                 isOpen={modalIsOpen}
-                onRequestClose={() => setIsOpen(false)}
+                onRequestClose={() => {
+                    setTaskName("")
+                    setTaskId("")
+                    setTaskCompany("")
+                    setTaskDate("")
+                    setTaskDescription("")
+                    setPriority(1)
+                    setTaskClosed()
+                    setTaskEstimatedTime("")
+                    setIsOpen(false)
+                }}
                 style={customStyles}
                 overlayClassName={customStyles.overlay}
             >
