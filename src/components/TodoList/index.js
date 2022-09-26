@@ -131,7 +131,10 @@ const TodoList = () => {
                                     setTaskEstimatedTime(item.estimatedTime)
                                 }}
                             >
-                                <p>{item.name}</p>
+                            <div style={{ display: "flex", flexDirection: "row" }}>
+                                <p style={{ marginRight: 5 }}>{item.name}</p>
+                                <p>[{item.company}]</p>
+                                </div>
                                 <div style={{ display: "flex", flexDirection: "row" }}>
                                     <p style={{ marginRight: 5 }}>{format(new Date(item.date), "dd/MM HH:mm")}</p>
                                     <p>[{item.estimatedTime}h]</p>
