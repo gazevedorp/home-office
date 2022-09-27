@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     //useEffect,
     useState
@@ -59,6 +59,7 @@ const TodoList = () => {
     const [taskId, setTaskId] = useState("")
     const [taskClosed, setTaskClosed] = useState()
     const [taskEstimatedTime, setTaskEstimatedTime] = useState("")
+    const [timeToday, setTimeToday] = useState()
     const uuid = Math.floor(Date.now() * Math.random()).toString(36);
 
     const listRedux = useSelector(state => state.todos)
@@ -97,6 +98,17 @@ const TodoList = () => {
         }
     }
 
+    useEffect(() => {
+        var temp = 0;
+        listRedux.filter(item => format(new Date(item.date), "dd/MM/yyyy") === format(new Date(), "dd/MM/yyyy"))
+        .map(item => { 
+            if(item.closed === false){
+            return temp = temp + parseFloat(item.estimatedTime);
+            }
+        })
+        setTimeToday(temp)
+    }, [listRedux])
+
     return (
         <>
             <Container>
@@ -109,6 +121,7 @@ const TodoList = () => {
                     </ButtonAdd>
                 </DivTaskHeader>
                 <div>
+                    <p style={{ color: "gray" }}>Tempo estimado restante para hoje: {timeToday}h</p>
                     {listRedux
                         .sort((a, b) => new Date(a.date) - new Date(b.date))
                         .sort((a, b) => b.priority - a.priority)
