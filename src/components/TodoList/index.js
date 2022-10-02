@@ -123,8 +123,8 @@ const TodoList = () => {
                 <div>
                     <p style={{ color: "gray" }}>Tempo estimado restante para hoje: {timeToday}h</p>
                     {listRedux
-                        .sort((a, b) => new Date(a.date) - new Date(b.date))
                         .sort((a, b) => b.priority - a.priority)
+                        .sort((a, b) => new Date(a.date) - new Date(b.date))
                         .sort((a, b) => a.closed - b.closed)
                         .map((item, index) =>
                             <TodoItem
